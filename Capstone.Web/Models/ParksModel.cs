@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Capstone.Web.Models
 {
-    public class ParkModel
+    public class ParksModel
     {
         public string ParkCode { get; set; }
         public string ParkName { get; set; }

@@ -1,2 +1,19 @@
 ﻿body {
+
+}
+.listContainer
+{
+    display:flex;
+    padding: 1%;
+}
+
+.imageDiv
+{
+    display:inline-block;
+    width: 40%;
+}
+
+.listText{
+    display:inline-block;
+    width:60%;
 }

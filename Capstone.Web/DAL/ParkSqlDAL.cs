@@ -11,16 +11,17 @@ namespace Capstone.Web.DAL
 {
     public class ParkSqlDAL : IParkDAL
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["Capstone"].ConnectionString;
+        private string connectionString = ConfigurationManager.ConnectionStrings["npgeek"].ConnectionString;
         private const string SQL_GetParks = "SELECT * from park;";
+
         public ParkSqlDAL(string connectionString)
         {
             this.connectionString = connectionString;
         }
 
-        public List<ParkModel> GetParks()
+        public List<ParksModel> GetParks()
         {
-            List<ParkModel> parks = new List<ParkModel>();
+            List<ParksModel> parks = new List<ParksModel>();
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -32,7 +33,7 @@ namespace Capstone.Web.DAL
 
                     while (reader.Read())
                     {
-                        ParkModel park = new ParkModel();
+                        ParksModel park = new ParksModel();
                         park.ParkCode = Convert.ToString(reader["parkCode"]);
                         park.ParkName = Convert.ToString(reader["parkName"]);
                         park.State = Convert.ToString(reader["state"]);
@@ -59,7 +60,7 @@ namespace Capstone.Web.DAL
             return parks;
         }
 
-        public ParkModel GetParks(string ParkCode)
+        public ParksModel GetParks(string ParkCode)
         {
             throw new NotImplementedException();
         }
