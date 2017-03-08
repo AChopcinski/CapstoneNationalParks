@@ -13,6 +13,7 @@ namespace Capstone.Web.DAL
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["npgeek"].ConnectionString;
         private const string SQL_GetParks = "SELECT * from park;";
+        private const string SQL_GetPark = "SELECT * from park WHERE parkCode = (@parkCode);";
 
         public ParkSqlDAL(string connectionString)
         {
@@ -60,9 +61,42 @@ namespace Capstone.Web.DAL
             return parks;
         }
 
-        public ParksModel GetParks(string ParkCode)
+        public ParksModel GetPark(string ParkCode)
         {
-            throw new NotImplementedException();
+            ParksModel p = new ParksModel();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL_GetPark, conn);
+                    cmd.Parameters.AddWithValue("@parkCode", ParkCode);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        p.ParkCode = Convert.ToString(reader["parkCode"]);
+                        p.ParkName = Convert.ToString(reader["parkName"]);
+                        p.State = Convert.ToString(reader["state"]);
+                        p.Acreage = Convert.ToInt32(reader["acreage"]);
+                        p.ElevationInFeet = Convert.ToInt32(reader["elevationInFeet"]);
+                        p.MilesOfTrail = Convert.ToInt32(reader["milesOfTrail"]);
+                        p.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);
+                        p.Climate = Convert.ToString(reader["climate"]);
+                        p.YearFounded = Convert.ToInt32(reader["yearFounded"]);
+                        p.AnnualVisitorCount = Convert.ToInt32(reader["annualVisitorCount"]);
+                        p.InspirationalQuote = Convert.ToString(reader["inspirationalQuote"]);
+                        p.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
+                        p.ParkDescription = Convert.ToString(reader["parkDescription"]);
+                        p.EntryFee = Convert.ToInt32(reader["entryFee"]);
+                        p.NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw;
+            }
+            return p;
         }
     }
 }

@@ -12,12 +12,14 @@
 {
     <div class="listContainer">
         <div class="imageDiv">
-            <a href="@Url.Action("GetParks", "Parks", new { code = park.ParkCode})">
+            <a href="~/Parks/ParkDetail/@park.ParkCode">
                 <img src="~/Content/img/parks/@(park.ParkCode).jpg" />
             </a>
         </div>
         <div class="listText">
-            <p>@park.ParkName <br /> @park.State <br /> @park.ParkDescription</p>
+            <h3>@park.ParkName </h3>
+            <h4>@park.State</h4>
+            <p> @park.ParkDescription</p>
         </div>
     </div>
 }

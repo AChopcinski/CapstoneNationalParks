@@ -23,5 +23,12 @@ namespace Capstone.Web.Controllers
             List<ParksModel> list = dal.GetParks();
             return View("Index", list);
         }
+
+        public ActionResult ParkDetail(string id)
+        {
+           ParksModel model = dal.GetPark(id);
+
+            return View("ParkDetail", model);
+        }
     }
 }
