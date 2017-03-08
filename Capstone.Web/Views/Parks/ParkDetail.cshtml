@@ -1,5 +1,7 @@
 ﻿@using Capstone.Web.Models
 @model ParksModel
+
+
 @{
     ViewBag.Title = "ParkDetail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -29,3 +31,4 @@
     <p>"@Model.InspirationalQuote"           -@Model.InspirationalQuoteSource</p>
 </div>
 
+<a href="~/Parks/WeatherForecast/@Model.ParkCode">Link to weather</a>

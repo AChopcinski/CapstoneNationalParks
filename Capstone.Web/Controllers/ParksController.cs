@@ -30,5 +30,12 @@ namespace Capstone.Web.Controllers
 
             return View("ParkDetail", model);
         }
+
+        //public ActionResult GetWeather(string id)
+        //{
+        //    WeatherForecastModel model = dal.GetWeather(id);
+
+        //    return View("WeatherForecast", model);
+        //}
     }
 }

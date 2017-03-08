@@ -11,6 +11,7 @@ namespace Capstone.Web.DAL
 {
     public class ParkSqlDAL : IParkDAL
     {
+       // private const string SQL_GetWeather = "SELECT * FROM weather WHERE parkCode = (@parkCode);";
         private string connectionString = ConfigurationManager.ConnectionStrings["npgeek"].ConnectionString;
         private const string SQL_GetParks = "SELECT * from park;";
         private const string SQL_GetPark = "SELECT * from park WHERE parkCode = (@parkCode);";
@@ -98,5 +99,34 @@ namespace Capstone.Web.DAL
             }
             return p;
         }
+
+     //   public WeatherForecastModel GetWeather(string ParkCode)
+        //{
+        //    WeatherForecastModel w = new WeatherForecastModel();
+
+        //    try
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(connectionString))
+        //        {
+        //            conn.Open();
+        //            SqlCommand cmd = new SqlCommand(SQL_GetWeather, conn);
+        //            cmd.Parameters.AddWithValue("@parkCode", ParkCode);
+        //            SqlDataReader reader = cmd.ExecuteReader();
+        //            while (reader.Read())
+        //            {
+        //                w.ParkCode = Convert.ToString(reader["parkCode"]);
+        //                w.FiveDayForecastValue = Convert.ToInt32(reader["fiveDayForecastValue"]);
+        //                w.Low = Convert.ToInt32(reader["low"]);
+        //                w.High = Convert.ToInt32(reader["high"]);
+        //                w.Forecast = Convert.ToString(reader["forecast"]);
+        //            }
+        //        }
+        //    }
+        //    catch (SqlException e)
+        //    {
+        //        throw;
+        //    }
+        //    return w;
+        //}
     }
 }
