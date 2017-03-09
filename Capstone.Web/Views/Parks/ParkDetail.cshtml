@@ -28,7 +28,9 @@
 </div>
 <div class="quote">
     <p>@Model.ParkDescription</p>
-    <p>"@Model.InspirationalQuote"           -@Model.InspirationalQuoteSource</p>
+    <p>"@Model.InspirationalQuote"</p>
+    <p>-@Model.InspirationalQuoteSource</p>
 </div>
 
-<a href="~/Parks/WeatherForecast/@Model.ParkCode">Link to weather</a>
+@Html.ActionLink("Link to forecast", "GetWeather", "WeatherForecast", new { id = (@Model.ParkCode)}, null)
+

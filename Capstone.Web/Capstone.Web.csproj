@@ -121,7 +121,7 @@
     <Content Include="Content\img\parks\ynp2.jpg" />
     <Content Include="Content\img\scenery.png" />
     <Content Include="Content\img\weather\cloudy.png" />
-    <Content Include="Content\img\weather\partlyCloudy.png" />
+    <Content Include="Content\img\weather\partly cloudy.png" />
     <Content Include="Content\img\weather\rain.png" />
     <Content Include="Content\img\weather\snow.png" />
     <Content Include="Content\img\weather\sunny.png" />
@@ -153,7 +153,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Parks\Index.cshtml" />
     <Content Include="Views\Parks\ParkDetail.cshtml" />
-    <Content Include="Views\Parks\WeatherForecast.cshtml" />
+    <Content Include="Views\WeatherForecast\Weather.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,8 +164,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\WeatherForecast\" />
-    <Folder Include="Views\Weather\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

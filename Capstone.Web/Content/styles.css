@@ -1,4 +1,8 @@
-﻿body {
+﻿h1{
+    text-align: center;
+}
+
+body {
 }
 
 .listContainer {
@@ -48,4 +52,13 @@ h3{
 
 h4{
     text-align:center;
+}
+
+.weatherContainer{
+    display: flex;
+    width: 96%;
+}
+.weatherInfo{
+    display: inline-block;
+
 }

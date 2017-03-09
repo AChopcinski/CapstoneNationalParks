@@ -18,11 +18,23 @@ namespace Capstone.Web.Controllers
         }
 
         // GET: WeatherForecast
-        public ActionResult GetWeather()
+        public ActionResult GetWeather(string id)
         {
-             WeatherForecastModel model = dal.GetWeather();
+             List<WeatherForecastModel> model = dal.GetWeather(id);
 
-            return View("WeatherForecast", model);
+            return View("Weather", model);
+        }
+
+        //public ActionResult GetParkName(string id)
+        //{
+        //   ParksModel p = dal.GetParkName(id);
+
+        //    return View("Weather", p);
+        //}
+
+        public ActionResult WeatherDetail()
+        {
+            return View("Weather");
         }
     }
 }

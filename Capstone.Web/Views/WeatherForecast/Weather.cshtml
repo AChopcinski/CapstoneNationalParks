@@ -1,0 +1,22 @@
+﻿@using Capstone.Web.Models
+@model List<WeatherForecastModel>
+
+@{
+    ViewBag.Title = "WeatherForecast";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Five Day Forecast </h2>
+<div class="weatherContainer">
+    @foreach (WeatherForecastModel w in Model)
+    {
+        <div class="weatherInfo">
+            <img src="~/Content/img/weather/@(w.Forecast).png" />
+            <p>@w.Low</p>
+            <p>@w.High</p>
+            <p>@w.GetWeatherStatement(w.Forecast, w.Low, w.High)</p>
+            <p></p>
+        </div>
+    }
+</div>
+
