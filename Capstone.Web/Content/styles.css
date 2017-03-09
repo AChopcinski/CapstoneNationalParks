@@ -5,16 +5,19 @@
 body {
 }
 
+
 .listContainer {
     display: flex;
     width: 98%;
     padding: 1%;
+    border: 5px solid blue;
 }
 
 .imageDiv {
     display: inline-block;
-    width: 40%;
+    width: 100%;
     border-radius: 10px;
+    border: 5px solid red;
 }
 
 .listText {
@@ -57,8 +60,30 @@ h4{
 .weatherContainer{
     display: flex;
     width: 96%;
+    border: 5px solid green;
+    justify-content:center;
+    margin: auto;
 }
 .weatherInfo{
     display: inline-block;
+    max-width: 19%;
+    border: 5px solid cyan;
+    
+}
 
+#weatherPicture{
+    width: 70%;
+    border: 5px solid red;
+    margin: auto;
+}
+
+
+
+#weatherDetails{
+    margin: auto;
+    text-align: center;
+    font-family: Verdana;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 5px solid salmon;
 }

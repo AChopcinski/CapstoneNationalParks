@@ -153,7 +153,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Parks\Index.cshtml" />
     <Content Include="Views\Parks\ParkDetail.cshtml" />
-    <Content Include="Views\WeatherForecast\Weather.cshtml" />
+    <Content Include="Views\WeatherForecast\WeatherF.cshtml" />
+    <Content Include="Views\WeatherForecast\WeatherC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -32,5 +32,5 @@
     <p>-@Model.InspirationalQuoteSource</p>
 </div>
 
-@Html.ActionLink("Link to forecast", "GetWeather", "WeatherForecast", new { id = (@Model.ParkCode)}, null)
-
+<button>@Html.ActionLink("Get forecast in Farenheit", "GetWeatherF", "WeatherForecast", new { id = (@Model.ParkCode) }, null)</button>
+<button>@Html.ActionLink("Get forecast in Celsius", "GetWeatherC", "WeatherForecast", new { id = (@Model.ParkCode) }, null)</button>

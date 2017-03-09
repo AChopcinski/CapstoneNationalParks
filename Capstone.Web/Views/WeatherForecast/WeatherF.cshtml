@@ -7,16 +7,20 @@
 }
 
 <h2>Five Day Forecast </h2>
+
 <div class="weatherContainer">
     @foreach (WeatherForecastModel w in Model)
     {
         <div class="weatherInfo">
-            <img src="~/Content/img/weather/@(w.Forecast).png" />
-            <p>@w.Low</p>
-            <p>@w.High</p>
-            <p>@w.GetWeatherStatement(w.Forecast, w.Low, w.High)</p>
+            <div id="weatherPicture"><img src="~/Content/img/weather/@(w.Forecast).png" /></div>
+            <div id="weatherDetails">
+                <p>
+                    High: @w.High F
+                </p>
+                <p>Low: @w.Low F</p>
+                <p>@w.GetWeatherStatement(w.Forecast, w.Low, w.High)</p>
+            </div>
             <p></p>
         </div>
     }
 </div>
-

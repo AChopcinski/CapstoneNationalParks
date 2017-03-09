@@ -30,5 +30,7 @@ namespace Capstone.Web.Controllers
 
             return View("ParkDetail", model);
         }
+
+
     }
 }

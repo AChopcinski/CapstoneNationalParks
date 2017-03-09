@@ -20,7 +20,37 @@ namespace Capstone.Web.DAL
             this.connectionString = connectionString;
         }
 
-        public List<WeatherForecastModel> GetWeather(string id)
+        public List<WeatherForecastModel> GetWeatherF(string id)
+        {
+            //WeatherForecastModel w = new WeatherForecastModel();
+            List<WeatherForecastModel> weathers = new List<WeatherForecastModel>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL_GetWeather, conn);
+                    cmd.Parameters.AddWithValue("@parkCode", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        WeatherForecastModel w = new WeatherForecastModel();
+                        w.ParkCode = Convert.ToString(reader["parkCode"]);
+                        w.FiveDayForecastValue = Convert.ToInt32(reader["fiveDayForecastValue"]);
+                        w.Low = Convert.ToInt32(reader["low"]);
+                        w.High = Convert.ToInt32(reader["high"]);
+                        w.Forecast = Convert.ToString(reader["forecast"]);
+                        weathers.Add(w);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw;
+            }
+            return weathers;
+        }
+        public List<WeatherForecastModel> GetWeatherC(string id)
         {
             //WeatherForecastModel w = new WeatherForecastModel();
             List<WeatherForecastModel> weathers = new List<WeatherForecastModel>();

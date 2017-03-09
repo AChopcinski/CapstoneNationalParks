@@ -18,11 +18,18 @@ namespace Capstone.Web.Controllers
         }
 
         // GET: WeatherForecast
-        public ActionResult GetWeather(string id)
+        public ActionResult GetWeatherF(string id)
         {
-             List<WeatherForecastModel> model = dal.GetWeather(id);
+             List<WeatherForecastModel> model = dal.GetWeatherF(id);
 
-            return View("Weather", model);
+            return View("WeatherF", model);
+        }
+
+        public ActionResult GetWeatherC(string id)
+        {
+            List<WeatherForecastModel> model = dal.GetWeatherC(id);
+
+            return View("WeatherC", model);
         }
 
         //public ActionResult GetParkName(string id)
@@ -32,8 +39,28 @@ namespace Capstone.Web.Controllers
         //    return View("Weather", p);
         //}
 
-        public ActionResult WeatherDetail()
+        public ActionResult WeatherDetailF()
         {
+            return View("WeatherF");
+        }
+
+        public ActionResult WeatherDetailC()
+        {
+            return View("WeatherC");
+        }
+
+
+        public ActionResult TemperatureType()
+        {
+            Session["isFarenheit"] = true;
+
+            return View("Weather");
+        }
+
+        public ActionResult SwitchToCelsius()
+        {
+            Session["isFarenheit"] = false;
+
             return View("Weather");
         }
     }
