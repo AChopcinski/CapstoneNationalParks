@@ -8,18 +8,20 @@
 
 
 <h2>Select your park</h2>
-@foreach (ParksModel park in Model)
-{
-    <div class="listContainer">
-        <div class="imageDiv">
-            <a href="~/Parks/ParkDetail/@park.ParkCode">
-                <img src="~/Content/img/parks/@(park.ParkCode).jpg" />
-            </a>
+<section>
+    @foreach (ParksModel park in Model)
+    {
+        <div class="listContainer">
+            <div class="imageDiv">
+                <a href="~/Parks/ParkDetail/@park.ParkCode">
+                    <img src="~/Content/img/parks/@(park.ParkCode).jpg" />
+                </a>
+            </div>
+            <div class="listText">
+                <h3>@park.ParkName </h3>
+                <h4>@park.State</h4>
+                <p> @park.ParkDescription</p>
+            </div>
         </div>
-        <div class="listText">
-            <h3>@park.ParkName </h3>
-            <h4>@park.State</h4>
-            <p> @park.ParkDescription</p>
-        </div>
-    </div>
-}
+    }
+</section>
