@@ -135,15 +135,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParksController.cs" />
+    <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WeatherForecastController.cs" />
     <Compile Include="DAL\IParkDAL.cs" />
+    <Compile Include="DAL\ISurveyDAL.cs" />
     <Compile Include="DAL\IWeatherForecastDAL.cs" />
     <Compile Include="DAL\ParkSqlDAL.cs" />
+    <Compile Include="DAL\SurveySqlDAL.cs" />
     <Compile Include="DAL\WeatherForecastSqlDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ParksModel.cs" />
+    <Compile Include="Models\SurveyModel.cs" />
     <Compile Include="Models\WeatherForecastModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +159,7 @@
     <Content Include="Views\Parks\ParkDetail.cshtml" />
     <Content Include="Views\WeatherForecast\WeatherF.cshtml" />
     <Content Include="Views\WeatherForecast\WeatherC.cshtml" />
+    <Content Include="Views\Survey\SurveyInput.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
