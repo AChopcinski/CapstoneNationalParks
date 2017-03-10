@@ -3,16 +3,16 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #d6d6d6;
+    background-color: #fff8d0;
     font-family: Verdana;
-    color: black;
+    color: #623905;
 }
 
 
 /*-----Header----*/
-h2 {
+/*h2 {
     color: #0D254C;
-}
+}*/
 
 .mainContainer {
     max-width: 1960px;
@@ -21,9 +21,10 @@ h2 {
 }
 
 header {
-    background: #0D254C;
+    background: #ffdaa8;
     margin-bottom: 20px;
     overflow: hidden;
+    border-bottom: 5px solid #aa7328;
 }
 
 .logo {
@@ -41,9 +42,10 @@ nav {
         display: inline-block;
         padding: 5px 20px;
         margin-left: 10px;
-        background: red;
+        background: #ccbf4a;
         line-height: normal;
         border-radius: 8px;
+        border: solid 2px #616389;
     }
 
 header img {
@@ -62,72 +64,112 @@ header img {
     display: flex;
     width: 96%;
     padding: 1%;
-    border: 5px solid green;
+    /*border: 5px solid green;*/
 }
 
 .imageDiv {
     display: inline-block;
-    border: 5px solid red;
+    /*border: 5px solid red;*/
+    padding: 10px 5px 7px 5px;
 }
 
 .listText {
     display: inline-block;
     padding: 40px;
+    max-width: 200px;
     width: auto;
     text-align: center;
-    background-color: antiquewhite;
-    border-radius:8px;
+    background-color: #ccbf4a;
+    border-radius: 8px;
+    font-family: Calibri;
+    color: #623905;
 }
-.parkDescription{
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #aa7328, rgba(0, 0, 0, 0));
+}
+
+.parkDescription {
     padding: 40px;
     width: auto;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: #ffdaa8;
     margin: 10px;
     border-radius: 8px;
+    font-family: Calibri;
+    color: #623905;
+    /*border: 5px solid;*/
 }
-.parkDetailContainer{
+
+.parkDetailContainer {
     display: inline;
     width: auto;
 }
-.parkDetailImage{
+
+.parkDetailImage {
     display: inline-block;
     padding: 40px;
     margin: auto;
-    border: 5px solid orange;
+    padding-left: 200px;
+    /*border: 5px solid orange;*/
+}
+
+.parkNameState {
+    display: inline-block;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 24px;
+    color: #623905;
+    /*border: 5px solid blue;*/
+    margin: auto;
+}
+
+.quoteNameContainer {
+    display: inline;
+    padding: 50px;
+    /*border: 5px solid brown;*/
 }
 
 .pageTitle {
-    color: #0D254C;
+    color: #623905;
 }
 
 .quote {
-    display: inline-block;
-    background-color: #EDC9AF;
+    background-color: #623905;
     padding: 15px;
     max-width: 50%;
-    width: 400px;
+    width: auto;
     border-radius: 8px;
     font-size: 16px;
+    color: #FFF4E5;
+    height: auto;
+    margin: auto;
 }
 
+
+/*----Weather----*/
 .weatherContainer {
     display: flex;
     width: 96%;
-    border: 5px solid green;
+    /*border: 5px solid green;*/
     justify-content: center;
     margin: auto;
 }
 
 .weatherInfo {
     display: inline-block;
-    width: 19%;
-    border: 5px solid cyan;
+    width: 20%;
+    margin: 5px;
+    /*border: 5px solid cyan;*/
 }
 
 #weatherPicture {
     max-width: 100%;
-    border: 5px solid red;
+    background: #fff;
+    border-bottom: 5px solid #aa7328;
+    border-radius: 8px;
     margin: auto;
 }
 
@@ -136,10 +178,38 @@ header img {
 #weatherDetails {
     margin: auto;
     text-align: center;
-    font-family: Verdana;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 5px solid salmon;
+    font-family: Calibri;
+    padding: 10px;
+    background-color:#ccbf4a;
+    border-radius: 8px;
+    font-weight: bold;
+    border-bottom: 5px solid #aa7328;
+}
+button{
+            display: inline-block;
+        padding: 7px 20px;
+        margin-top: 20px;
+        margin-left: 10px;
+        background: #ccbf4a;
+        line-height: normal;
+        border-radius: 8px;
+        border: solid 2px #616389;
 }
 
+/*----Survey----*/
+.surveyContainer{
+    max-width: 1960px;
+    width: 30%;
+    margin: auto;
+    border-bottom: 5px solid #aa7328;
+    border-radius: 8px;
+    border-top: 5px solid #ffebd0;
+    /*overflow: hidden;*/
+}
+#surveyInnerBox{
+    /*border: 5px solid cyan;*/
+    padding: 10px;
+       background-color:#ffebd0;
+
+}
 

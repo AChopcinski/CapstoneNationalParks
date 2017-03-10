@@ -17,13 +17,14 @@
                     <img src="~/Content/img/parks/@(park.ParkCode).jpg" />
                 </a>
             </div>
-            <div class="listText">
+            <div class="parkDescription">
                 <a href="~/Parks/ParkDetail/@park.ParkCode" style="text-decoration: none;" >
-                    <h3>@park.ParkName </h3>
+                    <h2 class="pageTitle">@park.ParkName </h2>
                 </a>
                 <h4>@park.State</h4>
-                <p> @park.ParkDescription</p>
+                <p> <em>@park.ParkDescription</em></p>
             </div>
         </div>
+        <hr />
     }
 </section>

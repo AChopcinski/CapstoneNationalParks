@@ -14,10 +14,8 @@
             <div class="weatherInfo">
                 <div id="weatherPicture"><img src="~/Content/img/weather/@(w.Forecast).png" /></div>
                 <div id="weatherDetails">
-                    <p>
-                        High: @w.CelsiusCalculation(w.High) C
-                    </p>
-                    <p>Low: @w.CelsiusCalculation(w.Low) C</p>
+                    <p>High: @w.CelsiusCalculation(w.High) C</p> <hr />
+                    <p>Low: @w.CelsiusCalculation(w.Low) C</p> <hr />
                     <p>@w.GetWeatherStatement(w.Forecast, w.Low, w.High)</p>
                 </div>
                 <p></p>

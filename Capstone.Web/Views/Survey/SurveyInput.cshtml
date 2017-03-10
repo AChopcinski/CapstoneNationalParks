@@ -9,21 +9,23 @@
 <body>
     @using (Html.BeginForm("GetSurvey", "Survey", FormMethod.Post))
     {
-        <div>
-            @Html.Label("ParkCode", "What is your favorite park?")
-            @Html.DropDownListFor(m => m.ParkCode, SurveyModel.Parks)
-        </div>
-        <div>
-            @Html.Label("EmailAddress", "Enter your email address.")
-            @Html.TextBoxFor(m => m.EmailAddress)
-        </div>
-        <div>
-            @Html.Label("State", "In which state do you live?")
-            @Html.DropDownListFor(m => m.State, SurveyModel.States)
-        </div>
-        <div>
-            @Html.Label("ActivityLevel", "How active are you?")
-            @Html.DropDownListFor(m => m.ActivityLevel, SurveyModel.ActivityLevels)
+        <div class="surveyContainer">
+            <div id="surveyInnerBox">
+                @Html.Label("ParkCode", "What is your favorite park? ") <br />
+                @Html.DropDownListFor(m => m.ParkCode, SurveyModel.Parks)
+            </div> 
+            <div id="surveyInnerBox">
+                @Html.Label("EmailAddress", "Enter your email address: ") <br />
+                @Html.TextBoxFor(m => m.EmailAddress)
+            </div> 
+            <div id="surveyInnerBox">
+                @Html.Label("State", "In which state do you live? ") <br />
+                @Html.DropDownListFor(m => m.State, SurveyModel.States)
+            </div> 
+            <div id="surveyInnerBox">
+                @Html.Label("ActivityLevel", "How active are you? ") <br />
+                @Html.DropDownListFor(m => m.ActivityLevel, SurveyModel.ActivityLevels)
+            </div>
         </div>
         <button>Submit</button>
     }

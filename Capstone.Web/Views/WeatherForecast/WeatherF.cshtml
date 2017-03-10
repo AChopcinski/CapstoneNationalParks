@@ -14,10 +14,10 @@
             <div class="weatherInfo">
                 <div id="weatherPicture"><img src="~/Content/img/weather/@(w.Forecast).png" /></div>
                 <div id="weatherDetails">
-                    <p>
-                        High: @w.High F
-                    </p>
+                    <p>High: @w.High F</p>
+                    <hr />
                     <p>Low: @w.Low F</p>
+                    <hr/>
                     <p>@w.GetWeatherStatement(w.Forecast, w.Low, w.High)</p>
                 </div>
                 <p></p>
