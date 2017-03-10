@@ -85,7 +85,7 @@ header img {
     color: #623905;
 }
 
-hr{
+hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #aa7328, rgba(0, 0, 0, 0));
@@ -180,24 +180,25 @@ hr{
     text-align: center;
     font-family: Calibri;
     padding: 10px;
-    background-color:#ccbf4a;
+    background-color: #ccbf4a;
     border-radius: 8px;
     font-weight: bold;
     border-bottom: 5px solid #aa7328;
 }
-button{
-            display: inline-block;
-        padding: 7px 20px;
-        margin-top: 20px;
-        margin-left: 10px;
-        background: #ccbf4a;
-        line-height: normal;
-        border-radius: 8px;
-        border: solid 2px #616389;
+
+button {
+    display: inline-block;
+    padding: 7px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background: #ccbf4a;
+    line-height: normal;
+    border-radius: 8px;
+    border: solid 2px #616389;
 }
 
 /*----Survey----*/
-.surveyContainer{
+.surveyContainer {
     max-width: 1960px;
     width: 30%;
     margin: auto;
@@ -206,10 +207,9 @@ button{
     border-top: 5px solid #ffebd0;
     /*overflow: hidden;*/
 }
-#surveyInnerBox{
+
+#surveyInnerBox {
     /*border: 5px solid cyan;*/
     padding: 10px;
-       background-color:#ffebd0;
-
+    background-color: #ffebd0;
 }
-
