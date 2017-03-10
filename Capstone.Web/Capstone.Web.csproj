@@ -160,6 +160,7 @@
     <Content Include="Views\WeatherForecast\WeatherF.cshtml" />
     <Content Include="Views\WeatherForecast\WeatherC.cshtml" />
     <Content Include="Views\Survey\SurveyInput.cshtml" />
+    <Content Include="Views\Survey\SurveyResults.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

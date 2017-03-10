@@ -3,17 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Threading.Tasks;
 
 namespace Capstone.Web.DAL
 {
-    public class ISurveyDAL
+    public interface ISurveyDAL
     {
-        //    bool SaveNewSurvey(SurveyModel newEntry);
+       bool SaveSurvey(SurveyModel newEntry);
 
-        //    internal void SaveNewSurvey(object forumPost)
-        //    {
-        //        throw new NotImplementedException();
-        //    }
-        //}
+       Dictionary<string, int> GetSurveyResults();
+       
     }
 }
