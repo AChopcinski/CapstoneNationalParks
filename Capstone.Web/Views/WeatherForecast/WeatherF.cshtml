@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Five Day Forecast </h2>
+<h2 class="pageTitle">Five Day Forecast </h2>
 <section>
     <div class="weatherContainer">
         @foreach (WeatherForecastModel w in Model)
@@ -24,4 +24,5 @@
             </div>
         }
     </div>
+  @*  <button>@Html.ActionLink("Get forecast in Celsius", "GetWeatherC", "WeatherForecast", new { id = (@w.ParkCode) }, null)</button>*@
 </section>

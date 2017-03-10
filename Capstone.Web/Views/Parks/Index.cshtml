@@ -6,9 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<h2>Select your park</h2>
 <section>
+    <h2 class="pageTitle">Select a park</h2>
+
     @foreach (ParksModel park in Model)
     {
         <div class="listContainer">
@@ -18,7 +18,9 @@
                 </a>
             </div>
             <div class="listText">
-                <h3>@park.ParkName </h3>
+                <a href="~/Parks/ParkDetail/@park.ParkCode" style="text-decoration: none;" >
+                    <h3>@park.ParkName </h3>
+                </a>
                 <h4>@park.State</h4>
                 <p> @park.ParkDescription</p>
             </div>

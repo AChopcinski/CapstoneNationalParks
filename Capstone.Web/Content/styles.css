@@ -1,22 +1,72 @@
-﻿h1{
+﻿
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #d6d6d6;
+    font-family: Verdana;
+    color: black;
+}
+
+
+/*-----Header----*/
+h2 {
+    color: #0D254C;
+}
+
+.mainContainer {
+    max-width: 1960px;
+    width: 96%;
+    margin: auto;
+}
+
+header {
+    background: #0D254C;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    margin-top: 10px;
+    max-height: 110px;
+}
+
+nav {
+    float: right;
+    line-height: 70px;
+}
+
+    nav li {
+        display: inline-block;
+        padding: 5px 20px;
+        margin-left: 10px;
+        background: red;
+        line-height: normal;
+        border-radius: 8px;
+    }
+
+header img {
+    height: 110px;
+}
+/*-----Section Layout-----*/
+
+#main-content {
+    max-width: 1960px;
+    width: 96%;
+    margin: auto;
     text-align: center;
 }
 
-body {
-}
-
-
 .listContainer {
     display: flex;
-    width: 98%;
+    width: 96%;
     padding: 1%;
-    border: 5px solid blue;
+    border: 5px solid green;
 }
 
 .imageDiv {
     display: inline-block;
-    width: 100%;
-    border-radius: 10px;
     border: 5px solid red;
 }
 
@@ -24,62 +74,66 @@ body {
     display: inline-block;
     padding: 40px;
     width: auto;
-}
-
-h2 {
     text-align: center;
+    background-color: antiquewhite;
+    border-radius:8px;
 }
-
-.imgDetail {
-    display: inline-block;
-    align-items: flex-start;
+.parkDescription{
+    padding: 40px;
+    width: auto;
+    text-align: center;
+    background-color: antiquewhite;
+    margin: 10px;
+    border-radius: 8px;
 }
-
-.listDetail {
-    display: flex;
-    margin-top: 2% ;
-    width: 80%;
-    height: 20%;
-}
-
-.detailText {
-    display: inline-block;
-    align-items:flex-start;
-    padding-left: 40px;
+.parkDetailContainer{
+    display: inline;
     width: auto;
 }
-
-h3{
-    text-align:center;
+.parkDetailImage{
+    display: inline-block;
+    padding: 40px;
+    margin: auto;
+    border: 5px solid orange;
 }
 
-h4{
-    text-align:center;
+.pageTitle {
+    color: #0D254C;
 }
 
-.weatherContainer{
+.quote {
+    display: inline-block;
+    background-color: #EDC9AF;
+    padding: 15px;
+    max-width: 50%;
+    width: 400px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.weatherContainer {
     display: flex;
     width: 96%;
     border: 5px solid green;
-    justify-content:center;
+    justify-content: center;
     margin: auto;
 }
-.weatherInfo{
+
+.weatherInfo {
     display: inline-block;
-    max-width: 19%;
+    width: 19%;
     border: 5px solid cyan;
-    
 }
 
-#weatherPicture{
-    width: 70%;
+#weatherPicture {
+    max-width: 100%;
     border: 5px solid red;
     margin: auto;
 }
 
 
 
-#weatherDetails{
+#weatherDetails {
     margin: auto;
     text-align: center;
     font-family: Verdana;
@@ -88,9 +142,4 @@ h4{
     border: 5px solid salmon;
 }
 
-.logo{
-    max-width: 25%;
-}
-#dropDownListTitle{
-    text-align:left;
-}
+
