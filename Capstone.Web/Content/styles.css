@@ -142,7 +142,7 @@ hr {
     max-width: 50%;
     width: auto;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 100%;
     color: #FFF4E5;
     height: auto;
     margin: auto;
@@ -180,7 +180,7 @@ hr {
     text-align: center;
     font-family: Calibri;
     padding: 10px;
-    background-color: #ccbf4a;
+    background-color: #b1b3f3;
     border-radius: 8px;
     font-weight: bold;
     border-bottom: 5px solid #aa7328;
@@ -212,4 +212,40 @@ button {
     /*border: 5px solid cyan;*/
     padding: 10px;
     background-color: #ffebd0;
+}
+/*----Result Page----*/
+.resultContainer {
+    max-width: 1960px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-left: 60px;
+    align-content:center;
+}
+
+#tableHead {
+    background: #ccbf4a;
+    font-size: x-large;
+    font-weight:bolder;
+}
+
+
+td {
+    margin: 200px;
+    padding: 20px;
+}
+
+tr:nth-child(even) {
+    background: #ffdaa8;
+}
+
+tr:nth-child(odd) {
+    background: #ffe7c7;
+    color: #623905;
+}
+
+
+#tableRows{
+    padding: 10px;
+    font-weight:bold;
 }
