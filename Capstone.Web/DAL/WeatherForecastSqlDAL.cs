@@ -105,11 +105,6 @@ namespace Capstone.Web.DAL
             return p;
         }
 
-        //    ublic string WeatherDetail()
-        //    {
-        //      ;
-        //    }
-        //}p
 
     }
 }

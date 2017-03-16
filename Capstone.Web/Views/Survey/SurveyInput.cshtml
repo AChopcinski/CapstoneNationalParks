@@ -12,7 +12,7 @@
         <div class="surveyContainer">
             <div id="surveyInnerBox">
                 @Html.Label("ParkCode", "What is your favorite park? ") <br />
-                @Html.DropDownListFor(m => m.ParkCode, SurveyModel.Parks)
+                @Html.DropDownListFor(m => m.ParkCode, Model.Parks)
             </div> 
             <div id="surveyInnerBox">
                 @Html.Label("EmailAddress", "Enter your email address: ") <br />

@@ -27,7 +27,10 @@ namespace Capstone.Web.Controllers
         public ActionResult ParkDetail(string id)
         {
            ParksModel model = dal.GetPark(id);
-
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
             return View("ParkDetail", model);
         }
 

@@ -62,19 +62,20 @@ namespace Capstone.Web.DAL
             return parks;
         }
 
-        public ParksModel GetPark(string ParkCode)
+        public ParksModel GetPark(string parkCode)
         {
-            ParksModel p = new ParksModel();
+            ParksModel p = null;
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(SQL_GetPark, conn);
-                    cmd.Parameters.AddWithValue("@parkCode", ParkCode);
+                    cmd.Parameters.AddWithValue("@parkCode", parkCode);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
+                        p = new ParksModel();
                         p.ParkCode = Convert.ToString(reader["parkCode"]);
                         p.ParkName = Convert.ToString(reader["parkName"]);
                         p.State = Convert.ToString(reader["state"]);

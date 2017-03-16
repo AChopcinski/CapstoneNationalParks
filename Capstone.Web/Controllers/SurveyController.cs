@@ -12,15 +12,23 @@ namespace Capstone.Web.Controllers
     public class SurveyController : Controller
     {
         private ISurveyDAL surveyDal;
+        private IParkDAL parkDal;
 
-        public SurveyController(ISurveyDAL surveyDal)
+        public SurveyController(ISurveyDAL surveyDal, IParkDAL parkDal)
         {
             this.surveyDal = surveyDal;
+            this.parkDal = parkDal;
         }
         // GET: Survey
         public ActionResult SurveyInput()
         {
-            return View("SurveyInput");
+            SurveyModel survey = new SurveyModel();
+            List<ParksModel> parks = parkDal.GetParks();
+            foreach (ParksModel park in parks)
+            {
+                survey.Parks.Add(new SelectListItem() { Text = park.ParkName, Value = park.ParkCode });
+            }
+            return View("SurveyInput", survey);
         }
 
         [HttpPost]
